@@ -6,4 +6,5 @@ Oren Kagan
 Hannah Whitmore
 Benjamin Majerovitz
 
-Instructor: Tim Hickey!
+
+Hi Ben How's it goin
