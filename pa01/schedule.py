@@ -61,7 +61,11 @@ class Schedule():
     def day(self, days):
         '''filters courses by days they meet'''
         return Schedule([course for course in self.courses if course['times'][2] in days])
-        
+
+    def course_num(self, num):
+        '''filters courses by coursenum'''
+        return Schedule([course for course in self.courses if course['coursenum'] in num])
+
 
 
     

@@ -47,6 +47,20 @@ def topmenu():
         elif command in ['s','subject']:
             subject = input("enter a subject:")
             schedule = schedule.subject([subject])
+        elif command in ['c', 'courses']:
+            course = input("enter a coursenum:")
+            schedule = schedule.course_num([course])
+        elif command in ['i', 'instructor']:
+            instructor = input('enter instructor\'s lastname to see courses they teach')
+            schedule = schedule.lastname([instructor])
+        elif command in ['t', 'title']:
+            title = input('enter a title')
+            schedule = schedule.title([title])
+        elif command in ['d', 'description']:
+            title = input('enter a description')
+            schedule = schedule.description([description])
+
+
         else:
             print('command',command,'is not supported')
             continue
@@ -63,6 +77,7 @@ def print_course(course):
     '''
     print(course['subject'],course['coursenum'],course['section'],
           course['name'],course['term'],course['instructor'])
+
 
 if __name__ == '__main__':
     topmenu()
