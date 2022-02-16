@@ -49,4 +49,21 @@ class Schedule():
         else:
             print("can't sort by "+str(field)+" yet")
             return self
+    
+    def title(self, phrase):
+        ''' filters courses containing the phrase in their title '''
+        return Schedule([course for course in self.courses if course['name'] in phrase])
+    
+    def description(self, phrase):
+        '''filters courses containing the phrase in their description'''
+        return Schedule([course for course in self.courses if course['description'] in phrase])
+
+    def day(self, days):
+        '''filters courses by days they meet'''
+        return Schedule([course for course in self.courses if course['times'][2] in days])
+        
+
+
+    
+    
  
