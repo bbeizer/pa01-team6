@@ -63,10 +63,3 @@ class Schedule():
     def name(self,names):
         ''' subject filters the courses by course name '''
         return Schedule([course for course in self.courses if course['name'] in names])
-<<<<<<< HEAD
-=======
-    def limit(self,limit):
-        ''' subject filters the courses by course name '''
-        return Schedule([course for course in self.courses if course['limit'] in limit])
-
->>>>>>> 5c5330d6e7c506b42994fb534400a1c7eed6dd15
