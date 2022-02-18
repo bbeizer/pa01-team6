@@ -42,6 +42,7 @@ class Schedule():
     def subject(self,subjects):
         ''' subject filters the courses by subject '''
         return Schedule([course for course in self.courses if course['subject'] in subjects])
+    
 
     def sort(self,field):
         if field=='subject':
@@ -65,6 +66,11 @@ class Schedule():
     def course_num(self, num):
         '''filters courses by coursenum'''
         return Schedule([course for course in self.courses if course['coursenum'] in num])
+    
+    def name(self,names):
+        ''' subject filters the courses by course name '''
+        return Schedule([course for course in self.courses if course['name'] in names])
+
 
 
 

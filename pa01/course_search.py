@@ -4,7 +4,7 @@ students search for courses they might want to take at Brandeis
 '''
 
 from schedule import Schedule
-import sys
+#import sys
 
 schedule = Schedule()
 schedule.load_courses()
@@ -29,7 +29,7 @@ def topmenu():
     topmenu is the top level loop of the course search app
     '''
     global schedule
-    while True:         
+    while True:
         command = input(">> (h for help) ")
         if command=='quit':
             return
@@ -53,18 +53,18 @@ def topmenu():
         elif command in ['i', 'instructor']:
             instructor = input('enter instructor\'s lastname to see courses they teach')
             schedule = schedule.lastname([instructor])
-        elif command in ['t', 'title']:
+        elif command in ['ti', 'title']:
             title = input('enter a title')
             schedule = schedule.title([title])
         elif command in ['d', 'description']:
             title = input('enter a description')
             schedule = schedule.description([description])
-
-
+        elif command in ['n', 'name']:
+            course_name = input("enter a course name:")
+            schedule = schedule.name([course_name])
         else:
             print('command',command,'is not supported')
             continue
-
         print("courses has",len(schedule.courses),'elements',end="\n\n")
         print('here are the first 10')
         for course in schedule.courses[:10]:
@@ -72,13 +72,10 @@ def topmenu():
         print('\n'*3)
 
 def print_course(course):
-    '''
-    print_course prints a brief description of the course 
-    '''
+    '''print_course prints a brief description of the course '''
     print(course['subject'],course['coursenum'],course['section'],
           course['name'],course['term'],course['instructor'])
 
-
 if __name__ == '__main__':
     topmenu()
-
+    
