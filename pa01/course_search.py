@@ -65,12 +65,9 @@ def topmenu():
         elif command in ['e', 'enrolled']:
             course_enrolled = input("enter a number of students:")
             schedule = schedule.enrolled([course_enrolled])
-<<<<<<< HEAD
-=======
         elif command in ['l', 'limit']:
             course_limit = input("enter a number of students:")
             schedule = schedule.limit([course_limit])
->>>>>>> 5c5330d6e7c506b42994fb534400a1c7eed6dd15
         else:
             print('command',command,'is not supported')
             continue
