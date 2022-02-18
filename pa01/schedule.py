@@ -65,6 +65,7 @@ class Schedule():
 
     def course_num(self, num):
         '''filters courses by coursenum'''
+<<<<<<< HEAD
         return Schedule([course for course in self.courses if course['coursenum'] in num])
     
     def name(self,names):
@@ -77,3 +78,6 @@ class Schedule():
     
     
  
+=======
+        return Schedule([course for course in self.courses if course['coursenum'] in num])
+>>>>>>> 665046fde34b8f330c0c29742cabd16b886ce356
