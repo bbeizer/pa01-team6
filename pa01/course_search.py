@@ -4,7 +4,7 @@ students search for courses they might want to take at Brandeis
 '''
 
 from schedule import Schedule
-#import sys
+import sys
 
 schedule = Schedule()
 schedule.load_courses()
@@ -59,14 +59,9 @@ def topmenu():
         elif command in ['d', 'description']:
             description = input('enter a description')
             schedule = schedule.description([description])
-<<<<<<< HEAD
         elif command in ['n', 'name']:
             course_name = input("enter a course name:")
             schedule = schedule.name([course_name])
-=======
-            
-
->>>>>>> 665046fde34b8f330c0c29742cabd16b886ce356
         else:
             print('command',command,'is not supported')
             continue
@@ -82,9 +77,5 @@ def print_course(course):
           course['name'],course['term'],course['instructor'])
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     topmenu()
     
-=======
-    topmenu()
->>>>>>> 665046fde34b8f330c0c29742cabd16b886ce356
