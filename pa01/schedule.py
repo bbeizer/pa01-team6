@@ -70,10 +70,3 @@ class Schedule():
     def name(self,names):
         ''' subject filters the courses by course name '''
         return Schedule([course for course in self.courses if course['name'] in names])
-<<<<<<< HEAD
-=======
-    def enrolled(self,students):
-        ''' subject filters the courses by course name '''
-        return Schedule([course for course in self.courses if course['enrolled'] in students])    
-
->>>>>>> f6cd91cb515485255a1e5eb711c51c335f0ab8c1

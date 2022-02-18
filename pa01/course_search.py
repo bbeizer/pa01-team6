@@ -62,12 +62,9 @@ def topmenu():
         elif command in ['n', 'name']:
             course_name = input("enter a course name:")
             schedule = schedule.name([course_name])
-<<<<<<< HEAD
-=======
         elif command in ['e', 'enrolled']:
             course_enrolled = input("enter a number of students:")
             schedule = schedule.enrolled([course_enrolled])
->>>>>>> f6cd91cb515485255a1e5eb711c51c335f0ab8c1
         else:
             print('command',command,'is not supported')
             continue
@@ -84,8 +81,4 @@ def print_course(course):
 
 if __name__ == '__main__':
     topmenu()
-<<<<<<< HEAD
     
-=======
-    
->>>>>>> f6cd91cb515485255a1e5eb711c51c335f0ab8c1
