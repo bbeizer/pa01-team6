@@ -82,8 +82,9 @@ def print_course(course):
     print(course['subject'],course['coursenum'],course['section'],
           course['name'],course['term'],course['instructor'])
 
-def print_course_name(course):
-    print(course['name'])
+def print_course_subject(course):
+    print(course['subject'])
+
 
 if __name__ == '__main__':
     topmenu()
